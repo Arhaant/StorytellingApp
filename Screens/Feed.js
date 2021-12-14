@@ -28,7 +28,7 @@ export default class Feed extends Component {
         await Font.loadAsync(customFont)
         this.setState({
             fontsLoaded: true
-        })
+     })
     }
 
 
@@ -71,7 +71,7 @@ export default class Feed extends Component {
         }
     }
 }
-
+ 
 
 const styles = StyleSheet.create({
     container: {
@@ -105,4 +105,4 @@ const styles = StyleSheet.create({
         fontFamily:'Bubblegum-Sans'
     }
 
-})
+})  

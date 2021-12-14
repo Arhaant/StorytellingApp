@@ -14,4 +14,4 @@ export default class DrawerNavigator extends Component{
             </Drawer.Navigator>
         )
     }
-}
+}   

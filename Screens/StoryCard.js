@@ -67,6 +67,7 @@ export default class StoryCard extends Component {
 
 const styles = StyleSheet.create({
     container: {
+
       flex: 1
     },
     cardContainer: {
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     },
     actionContainer: {
       justifyContent: "center",
-      alignItems: "center",
+      alignItems: "center", 
       padding: RFValue(10)
     },
     likeButton: {
