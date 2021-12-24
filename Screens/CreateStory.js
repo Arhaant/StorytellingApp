@@ -102,6 +102,7 @@ export default class CreateStory extends Component {
 							</DropDownPicker>
 
 						</View>
+						
                         <TextInput style={styles.callItWhatever} onChangeText={title => this.setState({ title })} placeholder="Item" placeholderTextColor={'white'}></TextInput>
                         <TextInput style={styles.callItWhatever} onChangeText={description => this.setState({ description })} placeholder="Item" placeholderTextColor={'white'} multiline={true} numberOfLines={4}></TextInput>
                         <TextInput style={styles.callItWhatever} onChangeText={story => this.setState({ story })} placeholder="Item" placeholderTextColor={'white'} multiline={true} numberOfLines={25}></TextInput>
@@ -150,20 +151,20 @@ const styles = StyleSheet.create({
 		flex:0.85
 	},
 	previewImage:{
-		width:'93%',
+		width:'93%	',
 		height:RFValue(250),
 		alignSelf:'center',
 		borderRadius:RFValue(10),
-		marginVertical:RFValue(10),
+		marginVertical:RFValue(10),	
 		resizeMode:'contain'
 	},
     callItWhatever:{
-        height:RFValue(35),
+        height:RFValue(35),	
         borderRadius:RFValue(17.5),
         borderWidth:RFValue(1),
         borderColor:'white',
         paddingLeft:RFValue(15),
-        color:'white',
-        fontFamily:'Bubblegum-Sans'
+        color:'white',	
+      fontFamily:'Bubblegum-Sans'
     }
 })

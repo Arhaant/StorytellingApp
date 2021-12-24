@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Platform, StatusBar, Image } from 'react-native
 import { RFValue } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -43,7 +43,7 @@ export default class StoryCard extends Component {
             return <AppLoading />
         }else{ 
         return(
-            <View style = {styles.container }>
+            <TouchableOpacity style = {styles.container } onPress={()=>this.props.navigation.navigate("StoryScreen",{story:this.props.story})}>
                 <View style = {styles.cardContainer}>
                     <Image style={styles.storyImage} source={require("../assets/story_image_1.png")}></Image>
                     <View style={styles.titleContainer}>
@@ -59,7 +59,7 @@ export default class StoryCard extends Component {
                   </View>
                     </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         )
         }
       }

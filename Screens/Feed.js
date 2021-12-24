@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Platform, StatusBar, Image } from 'react-native';
+import { Text, View, StyleSheet, Platform, StatusBar, Image, ScrollView,SafeAreaView } from 'react-native';
 import { RFValue } from "react-native-responsive-fontsize";
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
@@ -37,8 +37,8 @@ export default class Feed extends Component {
     }
 
     renderItem = ({ item: story }) => {
-        return <StoryCard story={story}/>
-    }
+        return <StoryCard story={story} navigation={this.props.navigation}/>
+    }   
 
 
     render() {
@@ -49,6 +49,8 @@ export default class Feed extends Component {
         else {
             return (
                 <View style={styles.container}>
+                    <SafeAreaView style={styles.droidSafeArea} />
+                    <ScrollView>
                    <View style={styles.appTitle}>
                         <View  style={styles.appIcon}>
                             <Image source={require("../assets/logo.png")} style={styles.iconImage}></Image>
@@ -66,6 +68,7 @@ export default class Feed extends Component {
                        />
 
                    </View>
+                   </ScrollView>
                 </View >
             )
         }
@@ -75,7 +78,7 @@ export default class Feed extends Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flex: 1,      
       backgroundColor: "#15193c"
     },
     droidSafeArea: {
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
         width:'100%',
         height:'100%',
         resizeMode:'contain'    
-    },
+    }, 
     appTitleTextContainer:{
         flex:0.7,
         justifyContent: "center"
